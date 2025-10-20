@@ -1,0 +1,428 @@
+/* =====================================
+   RESET BÁSICO
+   ====================================== */
+/* Quita márgenes y padding por defecto y define box-sizing */
+* {
+  margin: 0;            
+  padding: 0;           
+  box-sizing: border-box;
+}
+
+/* Estilos base para el body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* =====================================
+   HEADER
+   ====================================== */
+header {
+  position: relative;
+  background-color: #000;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 10;
+}
+
+header h1 img {
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* =====================================
+   NAVEGACIÓN
+   ====================================== */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #c00;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #c00;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* =====================================
+   HERO / INTRO
+   ====================================== */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: #1a1a1a;
+  font-size: 1.3rem;
+  color: #ccc;
+}
+
+/* =====================================
+   SECCIONES
+   ====================================== */
+section {
+  padding: 40px 20px;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+section p,
+section ul {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* =====================================
+   BOTONES
+   ====================================== */
+.btn {
+  position: relative;
+  display: inline-block;
+  background: #f39c12;
+  color: #000;
+  padding: 10px 20px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #c00;
+  left: 0;
+  bottom: 5px;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.btn:hover {
+  background: #d35400;
+  color: #000;
+}
+
+.btn:hover::after {
+  width: 100%;
+}
+
+/* =====================================
+   FORMULARIO
+   ====================================== */
+form input,
+form textarea,
+form button {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #f39c12;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #d35400;
+}
+
+/* =====================================
+   FOOTER
+   ====================================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* =====================================
+   ANIMACIONES
+   ====================================== */
+.fade-slide-zoom {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  animation: fadeSlideZoomIn 1.5s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeSlideZoomIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =====================================
+   LOGO
+   ====================================== */
+.logo-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.logo-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-image: url('fondo.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.logo-container img {
+  position: relative;
+  z-index: 1;
+}
+
+/* =====================================
+   PORTADA / COVER
+   ====================================== */
+.cover-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 50px 0;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.cover-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 450px;
+  background-image: url('fondo-portada.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.cover-container img.cover-img {
+  position: relative;
+  z-index: 1;
+  width: 75%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(255,0,0,0.7);
+  display: block;
+  margin: 0 auto;
+}
+
+/* CORRECCIÓN: logo de portada bajado un poco */
+.cover-container img.cover-logo {
+  position: absolute;
+  top: 50%; /* <-- ajusta este valor para subir o bajar el logo */
+  left: 50%;
+  transform: translateX(-50%); /* solo centra horizontalmente */
+  width: 250px;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* =====================================
+   PORTADA IZQUIERDA / DERECHA
+   ====================================== */
+.cover-left {
+  position: relative;
+}
+
+.cover-left img.cover-img {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(255,0,0,0.7);
+}
+
+.cover-left img.cover-logo {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.cover-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cover-right .buy-btn {
+  background: #f39c12;
+  color: #000;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+}
+
+.cover-right .buy-btn:hover {
+  background: #d35400;
+  color: #fff;
+}
+
+/* =====================================
+   HIGHLIGHT / RESALTADO
+   ====================================== */
+.highlight {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* =====================================
+   RESPONSIVE / MÓVILES
+   ====================================== */
+@media (max-width: 768px) {
+  .game-logo {
+    width: 80vw !important;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .cover-img {
+    width: 95%;
+  }
+
+  header h1 img {
+    max-width: 180px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  nav a {
+    margin: 5px 0;
+    font-size: 1.1rem;
+  }
+
+  .hero {
+    padding: 30px 10px;
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  section p,
+  section ul {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 1rem;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+.buy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;         /* espacio entre logo y texto */
+  background: #f39c12;
+  color: #000;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+}
+
+.buy-btn:hover {
+  background: #d35400;
+  color: #fff;
+}
+
+.buy-btn img.steam-logo {
+  width: 80px;     /* tamaño intermedio */
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;  /* asegura que quede centrado con el texto */
+}
+
+

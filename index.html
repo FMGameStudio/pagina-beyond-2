@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aplicar - Mi Proyecto</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    max-width: 600px;
+    color: #333;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  /* Imagen de portada centrada y más chica */
+  .portada {
+    display: block;
+    margin: 20px auto;   /* Centrado horizontal con espacio arriba/abajo */
+    width: 50%;          /* Ajusta el tamaño al 50% del contenedor */
+    height: auto;        /* Mantiene proporciones */
+    border-radius: 8px;  /* Opcional: bordes redondeados */
+  }
+
+  p.description {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+  }
+
+  form label {
+    display: block;
+    margin-top: 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e63946;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #d62828;
+  }
+</style>
+</head>
+<body>
+
+<h1>Cómo Aplicar</h1>
+
+<!-- Imagen de portada -->
+<img src="portada.jpg" alt="Portada" class="portada">
+
+<p class="description">Estamos buscando talento para los siguientes puestos:</p>
+
+<ul>
+  <li>Programador Unity</li>
+  <li>Artista 3D</li>
+  <li>Diseñador de niveles</li>
+  <li>Tester / QA</li>
+</ul>
+
+<form action="https://formspree.io/f/xnnzdgdg" method="POST">
+  <label for="name">Nombre completo</label>
+  <input type="text" id="name" name="name" required />
+
+  <label for="email">Correo electrónico</label>
+  <input type="email" id="email" name="_replyto" required />
+
+  <label for="position">Puesto al que aplicas</label>
+  <input type="text" id="position" name="position" required />
+
+  <label for="message">Cuéntanos sobre ti</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+
+  <button type="submit">Enviar aplicación</button>
+</form>
+
+</body>
+</html>
