@@ -1,67 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FM Game Studio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FM Game Studio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- HEADER -->
   <header>
     <h1 class="logo-container">
-  <img src="logo.png" alt="FM Game Studio" class="fade-slide-zoom" />
-</h1>
+      <img src="logo.png" alt="FM Game Studio" class="fade-slide-zoom" />
+    </h1>
 
     <nav>
       <a href="#game" class="fade-slide-zoom">El Juego</a>
+      <a href="#locations" class="fade-slide-zoom">Lugares</a>
       <a href="#jobs" class="fade-slide-zoom">Reclutamiento</a>
       <a href="#contact" class="fade-slide-zoom">Contacto</a>
     </nav>
   </header>
 
+  <!-- PORTADA -->
   <div class="cover-container">
-  <div class="cover-left">
-    <img src="portada.png" alt="Imagen del juego" class="cover-img" />
-    <img src="logo-juego.png" alt="Logo del juego" class="cover-logo" />
+    <div class="cover-left">
+      <img src="portada.png" alt="Imagen del juego" class="cover-img" />
+      <img src="logo-juego.png" alt="Logo del juego" class="cover-logo" />
+    </div>
+    <div class="cover-right">
+      <a href="https://store.steampowered.com/app/3522660/Beyond_The_Limits/" target="_blank" class="btn buy-btn">
+        <img src="steam-logo.png" alt="Steam" class="steam-logo">
+        Comprar en Steam
+      </a>
+    </div>
   </div>
-  <div class="cover-right">
-  <a href="https://store.steampowered.com/app/3522660/Beyond_The_Limits/" target="_blank" class="btn buy-btn">
-    <img src="steam-logo.png" alt="Steam" class="steam-logo">
-    Comprar en Steam
-  </a>
-</div>
 
-</div>
-
-
-
-
+  <!-- HERO / INTRO -->
   <section class="hero fade-slide-zoom">
-  <p class="highlight">Un joven ciudadano, cansado del cruel mundo real, decide adentrarse en el mundo criminal, convencido de que encontrará una vida mejor… aunque pronto descubrirá que todo será mucho peor.</p>
-</section>
-
-
-  <section id="game" class="fade-slide-zoom">
-    <h2>Sobre el juego</h2>
-    <p>Una breve descripción del juego, su estilo, historia y mecánicas...</p>
+    <p class="highlight">Un joven ciudadano, cansado del cruel mundo real, decide adentrarse en el mundo criminal, convencido de que encontrará una vida mejor… aunque pronto descubrirá que todo será mucho peor.</p>
   </section>
 
+  <!-- SECCIÓN POSTAL ESTILO GTA -->
+  <section id="game" class="fade-slide-zoom game-postcard gta-style">
+    <h2>Visita Beyond City</h2>
+    <div class="postcard">
+        <img src="beyond-city.jpg" alt="Postal de Beyond City" class="postcard-img" />
+        <div class="postcard-text">
+            <p>Visita Beyond City: una magnífica y verde urbe, conectada con la naturaleza… pero no te dejes engañar. En esta ciudad puedes encontrar la forma más baja de la sociedad.</p>
+            <a href="https://store.steampowered.com/app/3522660/Beyond_The_Limits/" target="_blank" class="btn buy-btn">
+                <img src="steam-logo.png" alt="Steam" class="steam-logo"> Comprar en Steam
+            </a>
+        </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN LUGARES DESTACADOS -->
+  <section id="locations" class="fade-slide-zoom">
+    <h2>Descubre Beyond City</h2>
+    <div class="locations-container">
+      
+      <!-- Lugar 1 -->
+      <div class="location-card">
+        <div class="location-card-bg" style="background-image: url('fondo1.jpg');"></div>
+        <div class="location-info">
+          <img src="lugar1.jpg" alt="Central City" class="location-img" />
+          <h3>Central City</h3>
+          <p>El corazón de Beyond City, lleno de rascacielos, negocios lucrativos y todo tipo de gente.</p>
+        </div>
+      </div>
+
+      <!-- Lugar 2 -->
+      <div class="location-card">
+        <div class="location-card-bg" style="background-image: url('fondo2.jpg');"></div>
+        <div class="location-info">
+          <img src="lugar2.jpg" alt="Brookpine" class="location-img" />
+          <h3>Brookpine</h3>
+          <p>Un pacifico pueblo a las afueras de la ciudad ideal para refugiarse y planear futuros golpes.</p>
+        </div>
+      </div>
+
+      <!-- Lugar 3 -->
+      <div class="location-card">
+        <div class="location-card-bg" style="background-image: url('fondo3.jpg');"></div>
+        <div class="location-info">
+          <img src="lugar3.jpg" alt="DeertrailPark" class="location-img" />
+          <h3>DeertrailPark</h3>
+          <p>El mejor lugar para convivir con la naturaleza llena de pacíficos animales, el lugar ideal para pasar el rato.</p>
+        </div>
+      </div>
+
+      <!-- Lugar 4 -->
+      <div class="location-card">
+        <div class="location-card-bg" style="background-image: url('fondo4.jpg');"></div>
+        <div class="location-info">
+          <img src="lugar4.jpg" alt="BlueWave Beach" class="location-img" />
+          <h3>BlueWave Beach</h3>
+          <p>Sin duda la playa con mejor reputación de la ciudad, es poco probable que te peguen un tiro aquí… o no?</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RECLUTAMIENTO -->
   <section id="jobs" class="fade-slide-zoom">
     <h2>Reclutamiento</h2>
     <p>Estamos buscando:</p>
     <ul>
-      <li>Programador Unity 3D</li>
-      <li>Artista 3D</li>
-      <li>Diseñador de niveles</li>
+      <li>Artista 3D para edificios</li>
+      <li>Artista 3D para modelar personajes</li>
+      <li>Animador 3D para cinematicas y captura de movimiento</li>
+      <li>Especialista en optimizacion de Unity</li>
+      <li>programador C# Unity</li>
     </ul>
     <a href="#contact" class="btn fade-slide-zoom">¡Aplica ahora!</a>
   </section>
 
+  <!-- CONTACTO -->
   <section id="contact" class="fade-slide-zoom">
     <h2>Contáctanos</h2>
-    <form action="https://formspree.io/f/tu_id" method="POST">
+    <form action="https://formspree.io/f/xnnzdgdg" method="POST">
       <input type="text" name="name" placeholder="Tu nombre" required />
       <input type="email" name="email" placeholder="Tu correo" required />
       <textarea name="message" placeholder="Cuéntanos sobre ti" required></textarea>
@@ -69,8 +127,9 @@
     </form>
   </section>
 
+  <!-- FOOTER -->
   <footer class="fade-slide-zoom">
-    <p>&copy; 2025 FM Game Studio - Todos los derechos reservados</p>
+    <p>&copy; 2025 HardFMGames - Todos los derechos reservados</p>
   </footer>
 </body>
 </html>
